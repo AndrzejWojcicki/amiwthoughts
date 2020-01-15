@@ -1,6 +1,6 @@
 export class Thought {
-  private thought: string;
-  private date: Date;
+  private readonly thought: string;
+  private readonly date: Date;
 
   constructor(thought, date) {
     this.thought = thought;

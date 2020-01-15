@@ -21,7 +21,7 @@ text: string;
   }
 
   keyboard(e: KeyboardEvent) {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && this.text !== '') {
       const thought = new Thought(this.text, moment.now());
       this.thoughts = this.thoughtService.addThought(thought);
       this.text = '';
@@ -29,9 +29,11 @@ text: string;
   }
 
   mouseclick() {
+    if ( this.text !== '') {
       const thought = new Thought(this.text, moment.now());
       this.thoughts = this.thoughtService.addThought(thought);
       this.text = '';
+  }
   }
 
   delete(index: number) {

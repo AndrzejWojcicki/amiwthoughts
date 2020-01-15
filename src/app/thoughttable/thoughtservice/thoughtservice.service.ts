@@ -10,7 +10,7 @@ export class ThoughtService {
 
 
   getThoughts(): Thought[] {
-    return this.getThoughts();
+    return this.getThoughtsFromStorage() || [];
   }
 
   addThought(thought: Thought) {
@@ -18,7 +18,7 @@ export class ThoughtService {
     thoughts = this.getThoughts();
     thoughts.push(thought);
     this.setThoughtsToStorage(thoughts);
-    return this.getThoughtsFromStorage();
+    return this.getThoughts();
   }
 
   deleteThought(index) {
@@ -26,7 +26,7 @@ export class ThoughtService {
     thoughts = this.getThoughtsFromStorage();
     thoughts.splice(index, 1);
     this.setThoughtsToStorage(thoughts);
-    return this.getThoughtsFromStorage();
+    return this.getThoughts();
   }
 
 
