@@ -1,0 +1,38 @@
+.list-thought li{
+  display: flex;
+  flex-direction: row;
+}
+
+.list-thought button {
+  visibility: hidden;
+}
+.list-thought li:hover button{
+  visibility: visible;
+}
+li{
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid white;
+  height: 60px;
+  color: red;
+}
+
+.addingdiv{
+  justify-content: center;
+  display: flex;
+}
+input{
+  width: 70%;
+  height: 60px;
+}
+button.addbtn{
+  width: 60px;
+  height: 66px;
+}
+button.dltbtn{
+  border-radius: 50%;
+}
+
+
+
+

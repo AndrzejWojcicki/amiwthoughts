@@ -1,0 +1,17 @@
+
+ <div class="list-thought">
+   <ul>
+      <li *ngFor="let thought of thoughts; let i = index" >
+        <p class="time">{{ thought.date | dateChanger }} </p>
+        <p> {{ thought.thought }}  </p>
+        <button class="dltbtn"  (click)="delete((thoughts.length - i -1))">x</button>
+      </li>
+    </ul>
+  </div>
+
+<div class = "addingdiv">
+  <input type="text" [(ngModel)]="text" (keypress)="keyboard($event)">
+  <button  class="addbtn" [disabled]="text ===''" (click)="mouseclick()">+</button>
+</div>
+
+

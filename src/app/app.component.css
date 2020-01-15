@@ -1,0 +1,10 @@
+h1{
+  color: white;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+}
+hr{
+  width: 90%;
+}
+
